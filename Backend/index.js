@@ -59,6 +59,6 @@ app.get("/api/convert", async (req, res) => {
     }
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
     console.log(`✅ Currency Converter API running at http://localhost:${PORT}`);
 });
