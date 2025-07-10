@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="converter-container">
+        <h1>💱 Currency Converter</h1>
+
+        <form id="convertForm">
+            <div class="converter-box">
+
+                <!-- From Input -->
+                <div class="currency-input">
+                    <label>From</label>
+                    <div class="input-group">
+                        <input type="number" id="amount" placeholder="Enter amount" required />
+                        <select id="fromCurrency"></select>
+                    </div>
+                </div>
+
+                <!-- Rate Display -->
+                <div class="rate-display" id="rateLabel">1 USD = 0.00 EUR</div>
+
+                <!-- To Output -->
+                <div class="currency-input">
+                    <label>To</label>
+                    <div class="input-group">
+                        <input type="text" id="result" placeholder="Converted amount" readonly />
+                        <select id="toCurrency"></select>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
