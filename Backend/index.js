@@ -2,15 +2,19 @@ const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
 require("dotenv").config();
-
+const path = require("path");
 const app = express();
 const PORT = 5000;
 
 // Replace with your actual FastForex API key
-const API_KEY = process.env.YOUR_API_KEY;
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, "../Frontend")));
+
+const API_KEY = process.env.YOUR_API_KEY;
+
+
 
 /**
  * Convert currency using FastForex.io
